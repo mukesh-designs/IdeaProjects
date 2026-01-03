@@ -1,0 +1,38 @@
+import java.util.*;
+
+//Find the 1st and last occurance of an element in string
+
+public class Recursion3 {
+    public static int first = -1;
+    public static int last = -1;
+
+    public static void findOccurance(String str, int idx, char element){
+        if(idx == str.length()){
+            System.out.println("First Occurance at: "+first);
+            System.out.println("Last Occurance at: "+last);
+            return;
+        }
+        char currChar = str.charAt(idx);
+        if(currChar == element){
+            if(first == -1){
+                first = idx;
+            }else{
+                last = idx;
+            }
+        }
+        findOccurance(str, idx+1, element);
+    }
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a String: ");
+        String str = sc.nextLine();
+
+        int idx = 0;
+        System.out.print("Enter an element: ");
+        char ch = sc.next().charAt(0);
+
+        findOccurance(str, idx, ch);
+        
+        sc.close();
+    }
+}
