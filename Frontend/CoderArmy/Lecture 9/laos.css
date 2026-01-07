@@ -1,0 +1,30 @@
+#container{
+    height: 200px;
+    width: 300px;
+    background-color: #002868;
+    position: relative;
+}
+
+#box1{
+    height: 50px;
+    width: 300px;
+    background-color: #CE1126;
+}
+
+#box2{
+    height: 50px;
+    width: 300px;
+    background-color: #CE1126;
+    position: absolute;
+    bottom: 0px;
+}
+
+#circle{
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    left: 110px;
+}
